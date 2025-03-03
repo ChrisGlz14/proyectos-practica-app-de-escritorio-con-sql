@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace proyecto_ejemplo_ado
 {
-    public partial class Form1 : Form
+    public partial class FormPokemon : Form
     {
         private List<Pokemon> listaPokemon;
-        public Form1()
+        public FormPokemon()
         {
             InitializeComponent();
         }

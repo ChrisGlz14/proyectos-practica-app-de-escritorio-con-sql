@@ -1,6 +1,6 @@
 ﻿namespace proyecto_ejemplo_ado
 {
-    partial class Form1
+    partial class FormPokemon
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -30,6 +30,7 @@
         {
             this.dgbPokemons = new System.Windows.Forms.DataGridView();
             this.PB_imgPokemon = new System.Windows.Forms.PictureBox();
+            this.imageList1 = new System.Windows.Forms.ImageList();
             ((System.ComponentModel.ISupportInitialize)(this.dgbPokemons)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_imgPokemon)).BeginInit();
             this.SuspendLayout();
@@ -52,15 +53,21 @@
             this.PB_imgPokemon.TabIndex = 1;
             this.PB_imgPokemon.TabStop = false;
             // 
-            // Form1
+            // imageList1
+            // 
+            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            // 
+            // FormPokemon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.PB_imgPokemon);
             this.Controls.Add(this.dgbPokemons);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "FormPokemon";
+            this.Text = "Pokedex App";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgbPokemons)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_imgPokemon)).EndInit();
@@ -72,6 +79,7 @@
 
         private System.Windows.Forms.DataGridView dgbPokemons;
         private System.Windows.Forms.PictureBox PB_imgPokemon;
+        private System.Windows.Forms.ImageList imageList1;
     }
 }
 
