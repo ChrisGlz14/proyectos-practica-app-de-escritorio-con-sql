@@ -23,6 +23,7 @@ namespace proyecto_ejemplo_ado
             ConexionBD conexionBD = new ConexionBD(); //
             listaPokemon = conexionBD.PokemonList();
             dgbPokemons.DataSource = listaPokemon;
+            dgbPokemons.Columns["Imagen"].Visible = false;
             PB_imgPokemon.Load(listaPokemon[0].Imagen);
         }
 

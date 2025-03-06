@@ -13,5 +13,7 @@ namespace segunda_practica_stock_zapatillas
         public string Marca { get; set; }
         public bool EstaDisponible { get; set; }
 
+        public Tipo Tipo { get; set; }
+
     }
 }

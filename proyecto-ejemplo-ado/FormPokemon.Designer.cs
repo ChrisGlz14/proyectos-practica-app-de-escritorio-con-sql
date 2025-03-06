@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.dgbPokemons = new System.Windows.Forms.DataGridView();
             this.PB_imgPokemon = new System.Windows.Forms.PictureBox();
-            this.imageList1 = new System.Windows.Forms.ImageList();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgbPokemons)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_imgPokemon)).BeginInit();
             this.SuspendLayout();
@@ -40,13 +41,13 @@
             this.dgbPokemons.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgbPokemons.Location = new System.Drawing.Point(31, 106);
             this.dgbPokemons.Name = "dgbPokemons";
-            this.dgbPokemons.Size = new System.Drawing.Size(432, 227);
+            this.dgbPokemons.Size = new System.Drawing.Size(660, 227);
             this.dgbPokemons.TabIndex = 0;
             this.dgbPokemons.SelectionChanged += new System.EventHandler(this.SelectionChangePokemon);
             // 
             // PB_imgPokemon
             // 
-            this.PB_imgPokemon.Location = new System.Drawing.Point(469, 72);
+            this.PB_imgPokemon.Location = new System.Drawing.Point(697, 72);
             this.PB_imgPokemon.Name = "PB_imgPokemon";
             this.PB_imgPokemon.Size = new System.Drawing.Size(315, 261);
             this.PB_imgPokemon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -63,7 +64,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1123, 450);
             this.Controls.Add(this.PB_imgPokemon);
             this.Controls.Add(this.dgbPokemons);
             this.Name = "FormPokemon";

@@ -23,7 +23,7 @@ namespace segunda_practica_stock_zapatillas
                 conexionDB.ConnectionString = "server =.\\SQLEXPRESS; database=TIENDA_DB; integrated security = true;";
                 sqlCommand.CommandType = System.Data.CommandType.Text;
 
-                sqlCommand.CommandText = "select Nombre,Talle,Marca, EstaDisponible FROM ZAPATILLAS";
+                sqlCommand.CommandText = "SELECT Marca, Talle, Nombre, EstaDisponible, T.Descripcion tipo From ZAPATILLAS Z, TIPOS T Where T.IdTipo = Z.IdTipo\r\n";
 
                 sqlCommand.Connection = conexionDB;
 
@@ -34,11 +34,12 @@ namespace segunda_practica_stock_zapatillas
                 while (lector.Read())
                 {
                     Zapatilla ejemploZapatilla = new Zapatilla();
-
                     ejemploZapatilla.Nombre = (string)lector["Nombre"];
                     ejemploZapatilla.EstaDisponible = (bool)lector["EstaDisponible"];
                     ejemploZapatilla.Talle = (int)lector["Talle"];
                     ejemploZapatilla.Marca = (string)lector["Marca"];
+                    ejemploZapatilla.Tipo = new Tipo();
+                    ejemploZapatilla.Tipo.Descripcion = (string)lector["Tipo"];
                     lista.Add(ejemploZapatilla);
                 }
                 conexionDB.Close();

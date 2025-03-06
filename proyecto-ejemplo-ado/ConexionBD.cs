@@ -31,7 +31,7 @@ namespace proyecto_ejemplo_ado
                 comando.CommandType = System.Data.CommandType.Text;
                 // Define el tipo de comando como texto plano, lo que indica que ejecutará una consulta SQL.
 
-                comando.CommandText = "SELECT Nombre, Numero, Bio , ImagenUrl FROM pokemon";
+                comando.CommandText = "Select P.Nombre, P.Numero, P.Bio, P.ImagenUrl, E.Tipo,D.tipo Debilidad From Pokemon P ,Elementos E, Elementos D Where P.Tipo = E.id AND P.idDebilidad = D.id\r\n";
                 // Consulta SQL para obtener los campos "Nombre", "Numero" y "Bio" de la tabla "pokemon".
 
                 comando.Connection = conexionDB; // Asocia el comando con la conexión a la base de datos.
@@ -51,6 +51,12 @@ namespace proyecto_ejemplo_ado
                     aux.Nombre = (string)lector["Nombre"];
                     aux.Biografia = (string)lector["Bio"];
                     aux.Imagen = (string)lector["ImagenUrl"];
+                    aux.Tipo = new TipoPokemon();
+                    aux.Tipo.Tipo = (string)lector["Tipo"];
+                    aux.Debilidad = new TipoPokemon();
+                    aux.Debilidad.Tipo = (string)lector["Debilidad"];
+
+                    
                   
                     //Otra forma de hacerlo tal vez mas intuitiva 
                     list.Add(aux);

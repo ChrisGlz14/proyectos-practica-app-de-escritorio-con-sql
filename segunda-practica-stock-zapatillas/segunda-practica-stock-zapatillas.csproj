@@ -54,6 +54,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tipo.cs" />
     <Compile Include="Zapatilla.cs" />
     <Compile Include="ZapatillasStore.cs" />
     <EmbeddedResource Include="FormZapatillas.resx">
