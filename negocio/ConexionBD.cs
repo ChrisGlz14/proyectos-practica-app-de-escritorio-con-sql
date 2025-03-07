@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;  //Una vez importada la libreria de SQL para base de datos podemos usar sus configuraciones
+using dominio;
 
-namespace proyecto_ejemplo_ado
+namespace negocio
 {
-    internal class ConexionBD
+    public class ConexionBD
     {
         public List<Pokemon> PokemonList()
         {
@@ -31,7 +32,7 @@ namespace proyecto_ejemplo_ado
                 comando.CommandType = System.Data.CommandType.Text;
                 // Define el tipo de comando como texto plano, lo que indica que ejecutará una consulta SQL.
 
-                comando.CommandText = "Select P.Nombre, P.Numero, P.Bio, P.ImagenUrl, E.Tipo,D.tipo Debilidad From Pokemon P ,Elementos E, Elementos D Where P.Tipo = E.id AND P.idDebilidad = D.id\r\n";
+                comando.CommandText = "Select P.Nombre, P.Numero, P.Bio, P.ImagenUrl, E.Tipo,D.tipo Debilidad From Pokemon P ,Elementos E, Elementos D Where P.Tipo = E.id AND P.idDebilidad = D.id";
                 // Consulta SQL para obtener los campos "Nombre", "Numero" y "Bio" de la tabla "pokemon".
 
                 comando.Connection = conexionDB; // Asocia el comando con la conexión a la base de datos.

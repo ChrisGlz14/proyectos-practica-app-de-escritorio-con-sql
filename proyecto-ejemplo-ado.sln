@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "proyecto-ejemplo-ado", "pro
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "segunda-practica-stock-zapatillas", "segunda-practica-stock-zapatillas\segunda-practica-stock-zapatillas.csproj", "{2CE6EA57-A1D8-46A9-AD5A-8A3F5ACB2151}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dominio", "dominio\dominio.csproj", "{3474EA49-037B-453D-A486-2F6EDEE33530}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "negocio", "negocio\negocio.csproj", "{5F83E659-2EC4-48B5-B767-73AE46A6354B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{2CE6EA57-A1D8-46A9-AD5A-8A3F5ACB2151}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2CE6EA57-A1D8-46A9-AD5A-8A3F5ACB2151}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2CE6EA57-A1D8-46A9-AD5A-8A3F5ACB2151}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3474EA49-037B-453D-A486-2F6EDEE33530}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3474EA49-037B-453D-A486-2F6EDEE33530}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3474EA49-037B-453D-A486-2F6EDEE33530}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3474EA49-037B-453D-A486-2F6EDEE33530}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F83E659-2EC4-48B5-B767-73AE46A6354B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F83E659-2EC4-48B5-B767-73AE46A6354B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F83E659-2EC4-48B5-B767-73AE46A6354B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F83E659-2EC4-48B5-B767-73AE46A6354B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
