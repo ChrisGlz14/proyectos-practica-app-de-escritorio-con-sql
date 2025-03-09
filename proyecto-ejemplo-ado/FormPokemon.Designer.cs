@@ -32,6 +32,7 @@
             this.dgbPokemons = new System.Windows.Forms.DataGridView();
             this.PB_imgPokemon = new System.Windows.Forms.PictureBox();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.btnAgregar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgbPokemons)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PB_imgPokemon)).BeginInit();
             this.SuspendLayout();
@@ -60,11 +61,22 @@
             this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             // 
+            // btnAgregar
+            // 
+            this.btnAgregar.Location = new System.Drawing.Point(31, 360);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(75, 23);
+            this.btnAgregar.TabIndex = 2;
+            this.btnAgregar.Text = "Agregar pokemon";
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            // 
             // FormPokemon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1123, 450);
+            this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.PB_imgPokemon);
             this.Controls.Add(this.dgbPokemons);
             this.Name = "FormPokemon";
@@ -81,6 +93,7 @@
         private System.Windows.Forms.DataGridView dgbPokemons;
         private System.Windows.Forms.PictureBox PB_imgPokemon;
         private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.Button btnAgregar;
     }
 }
 

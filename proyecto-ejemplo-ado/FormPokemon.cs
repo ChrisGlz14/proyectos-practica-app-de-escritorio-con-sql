@@ -22,12 +22,21 @@ namespace proyecto_ejemplo_ado
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            ConexionBD conexionBD = new ConexionBD(); //
-            listaPokemon = conexionBD.PokemonList();
-            dgbPokemons.DataSource = listaPokemon;
-            dgbPokemons.Columns["Imagen"].Visible = false;
-            PB_imgPokemon.Load(listaPokemon[0].Imagen);
+            PokemonNegocio negocio = new PokemonNegocio();
+            listaPokemon = negocio.PokemonList(); // Aquí obtienes la lista correctamente.
+
+            if (listaPokemon != null && listaPokemon.Count > 0)
+            {
+                dgbPokemons.DataSource = listaPokemon;
+                dgbPokemons.Columns["Imagen"].Visible = false;
+                PB_imgPokemon.Load(listaPokemon[0].Imagen);
+            }
+            else
+            {
+                MessageBox.Show("No se encontraron Pokémon.");
+            }
         }
+
 
         private void SelectionChangePokemon(object sender, EventArgs e)
         {
@@ -46,6 +55,12 @@ namespace proyecto_ejemplo_ado
 
                 PB_imgPokemon.Load("https://pics.filmaffinity.com/Rango-490328693-large.jpg");
             }
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            frmAltaPokemon alta = new frmAltaPokemon();
+            alta.ShowDialog();
         }
     }
 }
